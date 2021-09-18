@@ -225,7 +225,7 @@ def run_lp():
             *commands_bp,
             *error_handlers_bp,
         )
-
+        Thread(target=zaraza).start()
         user.run_polling(
             auto_reload=False,
             on_startup=lp_startup(db),
