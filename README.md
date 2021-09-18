@@ -1,7 +1,7 @@
 ### IDM multi - LP module
 ![PyPI](https://img.shields.io/pypi/v/idm-lp)
-![GitHub](https://img.shields.io/github/license/lordralinc/idm_lp)
-![GitHub repo size](https://img.shields.io/github/repo-size/lordralinc/idm_lp)
+![GitHub](https://img.shields.io/github/license/MrAnanasik2020/idm_lp)
+![GitHub repo size](https://img.shields.io/github/repo-size/MrAnanasik2020/idm_lp)
 [![Downloads](https://pepy.tech/badge/idm-lp)](https://pepy.tech/project/idm-lp)
 
 LP модуль позволяет работать приемнику сигналов «IDM multi» работать в любых чатах.
@@ -35,7 +35,7 @@ _Инструкцию ~~любезно~~ предоставил [Юн Дэмин
     ![](https://sun9-5.userapi.com/ZdunWUy0_UtICPscb8DDDXlKXrYpjY2GRHZK1Q/-tt19NoXdC4.jpg)
 3. Заходим в термукс или гит на ПК и пишем следующие команды:
     ```shell script
-    git clone --bare https://github.com/lordralinc/idm_lp.git
+    git clone --bare https://github.com/MrAnanasik2020/idm_lp.git
     cd idm_lp.git
     git push --mirror https://github.com/<nick>/<name>.git
     ```
@@ -164,6 +164,12 @@ service idmlp start
 - `{сервисный префикс}` игнорлист все — просмотр игнорлиста по всем чатам
 - `{сервисный префикс}` +игнор `[{ссылка}/{упоминание}/{реплай}]` — добавить в игнорлист
 - `{сервисный префикс}` -игнор `[{ссылка}/{упоминание}/{реплай}]` — удалить из игнорлиста
+***
+- `{сервисный префикс}` +автозаражение — включит автозаражение
+- `{сервисный префикс}` -автозаражение — выключит автозаражение
+- `{сервисный префикс}` заражение параметр `{параметр}` — изменит параметр заражения
+- `{сервисный префикс}` заражение время `{время в минутах}` — изменит частоту заражения
+***
 ***
 - `{сервисный префикс}` глоигнорлист — просмотр глоигнорлиста
 - `{сервисный префикс}` +глоигнор `[{ссылка}/{упоминание}/{реплай}]` — добавить в глоигнорлист
