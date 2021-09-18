@@ -1,13 +1,13 @@
 import json
 
-__version__ = '1.13.0'
+__version__ = '1.13.1'
 __author__ = 'MrAnanasik2020'
 __description__ = (
     "LP модуль позволяет работать приемнику сигналов «IDM multi» работать в любых чатах. "
     "Так же он добавляет игнор, глоигнор, мут и алиасы."
 )
 
-CONFIG_PATH = "../config.json"
+CONFIG_PATH = "config.json"
 USE_APP_DATA = False
 
 LOGGER_LEVEL = 'INFO'
@@ -35,7 +35,7 @@ ALLOW_SENTRY = True
 SENTRY_URL = "https://7a3f1b116c67453c91600ad54d4b7087@o481403.ingest.sentry.io/5529960"
 
 try:
-    with open('../lp_dc_config.json', 'r', encoding='utf-8') as file:
+    with open('lp_dc_config.json', 'r', encoding='utf-8') as file:
         data = json.loads(file.read())
         APP_ID = data.get('app_id', 0)
         APP_SECRET = data.get('app_secret', "public")
