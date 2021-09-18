@@ -10,6 +10,38 @@ user = Blueprint(
     name='repeat_blueprint'
 )
 
+@user.on.message_handler(FromMe(), text='<prefix:service_prefix> +автозаражение')
+@logger_decorator
+async def repeat_wrapper(message: Message, **kwargs):
+    db = Database.get_current()
+    db.worker = True
+    db.save()
+    await edit_message(message, "✅ автозаражение включено")
+
+@user.on.message_handler(FromMe(), text='<prefix:service_prefix> -автозаражение')
+@logger_decorator
+async def repeat_wrapper(message: Message, **kwargs):
+    db = Database.get_current()
+    db.worker = False
+    db.save()
+    await edit_message(message, "✅ автозаражение выключено")
+
+@user.on.message_handler(FromMe(), text='<prefix:service_prefix> заражение время <time>')
+@logger_decorator
+async def repeat_wrapper(message: Message, time: int, **kwargs):
+    tim = int(time) * 60
+    db = Database.get_current()
+    db.worker_time = tim
+    db.save()
+    await edit_message(message, f"✅ Время заражения установлено на {time} минут")
+
+@user.on.message_handler(FromMe(), text='<prefix:service_prefix> заражение параметр <text>')
+@logger_decorator
+async def repeat_wrapper(message: Message, text: str, **kwargs):
+    db = Database.get_current()
+    db.worker_param = text
+    db.save()
+    await edit_message(message, f"✅ Параметр заражения установлен на <<{text}>>")
 
 @user.on.message_handler(TrustedRule(), text='<signal:repeater_word>')
 @logger_decorator

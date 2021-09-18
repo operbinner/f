@@ -49,6 +49,10 @@ async def info_wrapper(message: Message, **kwargs):
 
     ▶ Заражение в ответ: {"&#9989;" if db.bio_reply else "&#10060;"}
     
+    ▶ Автозаражение: {"&#9989;" if db.worker else "&#10060;"}
+    ▶ Автозаражение | Параметр: {db.worker_param}
+    ▶ Автозаражение | Время: {db.worker_time/60}
+    
     ▶ NoMeta: {"&#9989;" if db.nometa_enable else "&#10060;"}
     ▶ NoMeta | Количество секунд: {db.nometa_delay}
     ▶ NoMeta | Сообщение: <<{db.nometa_message}>>

@@ -10,6 +10,7 @@ user = Blueprint(
 )
 
 
+
 @user.on.message(FromMe(), text='<prefix:service_prefix> секретный код <secret_code>')
 @logger_decorator
 async def set_secret_code_wrapper(message: Message, secret_code: str, **kwargs):
