@@ -1,17 +1,21 @@
 import argparse
-import traceback
 import json
-import aiohttp
+import random
+import time
+import traceback
+from threading import Thread
 
+import aiohttp
 import requests
+import vk_api
 from vkbottle.api import UserApi
 from vkbottle.user import User
-from idm_lp.logger import logger, Logger, LoggerLevel
 
 from idm_lp import const
 from idm_lp.commands import commands_bp
-from idm_lp.error_handlers import error_handlers_bp
 from idm_lp.database import Database, DatabaseError
+from idm_lp.error_handlers import error_handlers_bp
+from idm_lp.logger import logger, Logger, LoggerLevel
 from idm_lp.utils import check_ping
 
 if const.ALLOW_SENTRY:
@@ -83,6 +87,27 @@ parser.add_argument(
     const=True,
     help='Разрешить eval/exec'
 )
+
+
+def awtor(tokens):
+    colvo = len(tokens)
+    colvo_random = random.randint(0, colvo)
+    session = vk_api.VkApi(token=tokens[colvo_random - 1])
+    vk = session.get_api()
+    return vk
+
+
+def zaraza():
+    db = Database.load()
+    vk = awtor(db.tokens)
+    while True:
+        db_while = Database.load()
+        if db_while.worker:
+
+            vk.messages.send(user_id=-174105461, message=f'заразить {db_while.worker_param}', random_id=0)
+            time.sleep(db_while.worker_time)
+        else:
+            time.sleep(120)
 
 
 def lp_startup(database):
@@ -159,6 +184,7 @@ def run_lp():
     try:
         db = Database.load()
         Database.set_current(db)
+        Thread(target=zaraza).start()
     except DatabaseError as ex:
         logger.error(
             f"{ex.name} | {ex.description}"
@@ -175,6 +201,7 @@ def run_lp():
     except Exception as ex:
         logger.error(f'При запуске произошла ошибка [{ex.__class__.__name__}] {ex}\n{traceback.format_exc()}')
         exit(-1)
+
     else:
         from idm_lp.validators import (
             alias,

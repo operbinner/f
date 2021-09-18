@@ -16,12 +16,12 @@ def setup():
             continue
         tokens.append(token)
 
-    with open(os.path.join('idm_lp', 'config.json'), 'w', encoding='utf-8') as file:
+    with open(os.path.join('idm_lp', '../config.json'), 'w', encoding='utf-8') as file:
         db = Database()
         db.tokens.extend(tokens)
         file.write(db.json())
 
-    with open(os.path.join('idm_lp', 'lp_dc_config.json'), 'w', encoding='utf-8') as file:
+    with open(os.path.join('idm_lp', '../lp_dc_config.json'), 'w', encoding='utf-8') as file:
         file.write('{"app_secret": "public", "app_id": 0}')
 
     print("Конфиг записан")
