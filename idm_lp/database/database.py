@@ -31,7 +31,9 @@ class Database(BaseModel, ContextInstanceMixin):
 
     bio_reply: bool = False
     repeater_active: bool = False
-
+    worker: bool = False
+    worker_time: int = 3600
+    worker_param: str = "р"
     delete_all_notify: bool = False
     auto_exit_from_chat: bool = False
     auto_exit_from_chat_delete_chat: bool = False
