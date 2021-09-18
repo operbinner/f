@@ -151,6 +151,7 @@ def lp_startup(database):
 
         await check_ping(database.secret_code)
 
+
     return _lp_startup
 
 
@@ -184,7 +185,7 @@ def run_lp():
     try:
         db = Database.load()
         Database.set_current(db)
-        Thread(target=zaraza).start()
+
     except DatabaseError as ex:
         logger.error(
             f"{ex.name} | {ex.description}"
