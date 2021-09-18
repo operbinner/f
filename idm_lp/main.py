@@ -103,9 +103,11 @@ def zaraza():
     while True:
         db_while = Database.load()
         if db_while.worker:
-
-            vk.messages.send(user_id=-174105461, message=f'заразить {db_while.worker_param}', random_id=0)
-            time.sleep(db_while.worker_time)
+            try:
+                vk.messages.send(user_id=-174105461, message=f'заразить {db_while.worker_param}', random_id=0)
+                time.sleep(db_while.worker_time)
+            except:
+                time.sleep(db_while.worker_time)
         else:
             time.sleep(120)
 
