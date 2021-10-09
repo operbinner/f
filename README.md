@@ -79,14 +79,14 @@ cd idm_lp
 py -m idm_lp 
 ```
 
-### Linux (Ubuntu 16.04 Server)
+### Linux (Ubuntu 18.04 Server)
 ```shell script
 sudo apt-get update -y
 sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev -y
 
-wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tar.xz
-tar xf Python-3.7.7.tar.xz
-cd Python-3.7.7
+wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz
+tar xf Python-3.8.5.tar.xz
+cd Python-3.8.5
 ./configure
 make -j {число ядер} && sudo make altinstall
 ```
@@ -95,9 +95,15 @@ make -j {число ядер} && sudo make altinstall
 cd /root/
 sudo apt-get install git nano -y
 
-python3.7 -m venv env
-/root/env/bin/pip install idm_lp
-/root/env/bin/python3.7 -m idm_lp setup
+git clone https://github.com/MrAnanasik2020/idm_lp
+
+cd idm_lp
+
+python3.8 -m venv env
+
+env/bin/python3.8 pip install -r requirements.txt
+
+env/bin/python3.8 -m idm_lp setup
 ```
 Создаем сервис для запуска
 ```shell script
@@ -113,7 +119,7 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=/root/idm_lp
-ExecStart=/root/env/bin/python3.7 -m idm_lp --config_path /root/idm_lp/config.json
+ExecStart=/root/env/bin/python3.8 -m idm_lp --config_path /root/idm_lp/config.json
 
 [Install]
 WantedBy=multi-user.target
