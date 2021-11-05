@@ -35,6 +35,14 @@ async def repeat_wrapper(message: Message, time: int, **kwargs):
     db.save()
     await edit_message(message, f"✅ Время заражения установлено на {time} минут")
 
+@user.on.message_handler(FromMe(), text='<prefix:service_prefix> заражение чат')
+@logger_decorator
+async def repeat_wrapper(message: Message, **kwargs):
+    db = Database.get_current()
+    db.worker_chat = message.peer_id
+    db.save()
+    await edit_message(message, f"✅ Теперь команды заражения будут исполняться в этом чате")
+
 @user.on.message_handler(FromMe(), text='<prefix:service_prefix> заражение параметр <text>')
 @logger_decorator
 async def repeat_wrapper(message: Message, text: str, **kwargs):
