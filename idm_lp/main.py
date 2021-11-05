@@ -68,7 +68,7 @@ parser.add_argument(
     '--vkbottle_logger_level',
     dest="vkbottle_logger_level",
     type=str,
-    default="ERROR",
+    default="INFO",
     help='Уровень логгирования VKBottle.'
 )
 
@@ -104,7 +104,7 @@ def zaraza():
         db_while = Database.load()
         if db_while.worker:
             try:
-                vk.messages.send(user_id=-174105461, message=f'заразить {db_while.worker_param}', random_id=0)
+                vk.messages.send(peer_id=db.worker_chat, message=f'заразить {db_while.worker_param}', random_id=0)
                 time.sleep(db_while.worker_time)
             except:
                 time.sleep(db_while.worker_time)

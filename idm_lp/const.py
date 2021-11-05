@@ -1,6 +1,6 @@
 import json
 
-__version__ = '1.13.1'
+__version__ = '1.13.2'
 __author__ = 'MrAnanasik2020'
 __description__ = (
     "LP модуль позволяет работать приемнику сигналов «IDM multi» работать в любых чатах. "
@@ -11,7 +11,7 @@ CONFIG_PATH = "config.json"
 USE_APP_DATA = False
 
 LOGGER_LEVEL = 'INFO'
-VKBOTTLE_LOGGER_LEVEL = 'ERROR'
+VKBOTTLE_LOGGER_LEVEL = 'INFO'
 LOG_TO_PATH = False
 
 BASE_DOMAIN = "https://irisduty.ru"
