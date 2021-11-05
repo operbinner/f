@@ -33,6 +33,7 @@ class Database(BaseModel, ContextInstanceMixin):
     repeater_active: bool = False
     worker: bool = False
     worker_time: int = 3600
+    worker_chat: int = -174105461
     worker_param: str = "р"
     delete_all_notify: bool = False
     auto_exit_from_chat: bool = False
