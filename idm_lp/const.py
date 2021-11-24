@@ -14,7 +14,7 @@ LOGGER_LEVEL = 'INFO'
 VKBOTTLE_LOGGER_LEVEL = 'INFO'
 LOG_TO_PATH = False
 
-BASE_DOMAIN = "https://irisduty.ru"
+BASE_DOMAIN = "https://risingduty.ru"
 
 
 def CALLBACK_LINK():
