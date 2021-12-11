@@ -101,7 +101,7 @@ cd idm_lp
 
 python3.8 -m venv env
 
-env/bin/python3.8 pip install -r requirements.txt
+env/bin/python3.8 -m pip install -r requirements.txt
 
 env/bin/python3.8 -m idm_lp setup
 ```
