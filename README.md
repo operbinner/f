@@ -119,7 +119,7 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=/root/idm_lp
-ExecStart=/root/env/bin/python3.8 -m idm_lp --config_path /root/idm_lp/config.json
+ExecStart=/root/idm_lp/env/bin/python3.8 -m idm_lp --config_path /root/idm_lp/config.json
 
 [Install]
 WantedBy=multi-user.target
