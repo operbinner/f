@@ -69,14 +69,14 @@ _Инструкцию ~~любезно~~ предоставил [Юн Дэмин
 cd путь_до_папки
 py -m venv env
 env\Scripts\activate.bat
-py -m pip install -U idm_lp
+py -m pip install -r requirements.txt
 py -m idm_lp setup
 
 Запуск:
 cd путь_до_папки
 env\Scripts\activate.bat
 cd idm_lp
-py -m idm_lp 
+py -m idm_lp
 ```
 
 ### Linux (Ubuntu 18.04 Server)
