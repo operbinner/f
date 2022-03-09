@@ -1,0 +1,171 @@
+{
+  "tokens": [
+    "токен1",
+    "токен2",
+    "токен3(не забудь обрезать)" 
+    ], 
+  "secret_code":"секретка",
+  "ru_captcha_key":"ключ",
+  "dd_prefix": "дд",
+  "bio_reply": false,
+  "worker": false,
+  "worker_time": 3600,
+  "worker_chat": -174105461,
+  "worker_param": "р",
+  "delete_all_notify": false,
+  "sloumo": [],
+  "add_to_friends_on_chat_enter": [],
+  "auto_exit_from_chat": false,
+  "auto_exit_from_chat_delete_chat": false,
+  "auto_exit_from_chat_add_to_black_list": false,
+  "disable_notifications": false,
+  "nometa_enable": false,
+  "nometa_message": "текст нометы",
+  "nometa_attachments": [],
+  "nometa_delay": 60.0,
+  "service_prefixes": [
+    "!слп",
+    ".слп"
+  ],
+  "self_prefixes": [
+    "!л",
+    ".л"
+  ],
+  "duty_prefixes": [
+    "!лд",
+    ".лд"
+  ],
+  "ignored_members": [],
+  "ignored_global_members": [],
+  "muted_members": [],
+  "aliases": [ 
+  {
+	"name" : "шаб" ,
+	"command_from" : "шаб" ,
+	"command_to" : "шаб"
+	},
+	{
+	"name" : "~шаб" ,
+	"command_from" : "~шаб" ,
+	"command_to" : "~шаб"
+	},
+	{
+	"name" : "+шаб" ,
+	"command_from" : "+шаб" ,
+	"command_to" : "+шаб"
+	},
+	{
+	"name" : "-шаб" ,
+	"command_from" : "-шаб" ,
+	"command_to" : "-шаб"
+	},
+	{
+	"name" : "шабы" ,
+	"command_from" : "шабы" ,
+	"command_to" : "шабы"
+	},
+	{
+	"name" : "гшаб" ,
+	"command_from" : "гшаб" ,
+	"command_to" : "гшаб"
+	},
+	{
+	"name" : "+гшаб" ,
+	"command_from" : "+гшаб" ,
+	"command_to" : "+гшаб"
+	},
+	{
+	"name" : "-гшаб" ,
+	"command_from" : "-гшаб" ,
+	"command_to" : "-гшаб"
+	},
+  {
+	"name" : "гшабы" ,
+	"command_from" : "гшабы" ,
+	"command_to" : "гшабы"
+	},
+	{
+	"name": "удалить1",
+	"command_from": "дд-1",
+	"command_to": "рр- 1 сообщение удалено"
+	},
+	{
+	"name": "удалить2",
+	"command_from": "дд-2",
+	"command_to": "рр- 2 сообщение удалено "
+	},
+	{
+	"name": "удалить3",
+	"command_from": "дд-3",
+	"command_to": "рр- 3 сообщение удалено "
+	},
+	{
+	"name": "удалить4",
+	"command_from": "дд-4",
+	"command_to": "рр- 4 сообщение удалено "
+	},
+	{
+	"name": "удалить5",
+	"command_from": "дд-5",
+	"command_to": "рр- 5 сообщение удалено "
+	},
+  {
+  "name": "+лайк",
+  "command_from": "+лайк",
+  "command_to": "+лайк"
+  },
+  {
+  "name": "-лайк",
+  "command_from": "-лайк",
+  "command_to": "-лайк"
+  }
+  ],
+  "role_play_commands": [
+  { 
+	"name": "поцеловать",
+	"gen": "dat",
+	"formatter_man": "😘| {first_user} поцеловал {second_user}",
+	"formatter_woman": "😘| {first_user} поцеловала {second_user}",
+	"all_ending": "сразу всех"
+	 },
+	{
+	"name": "обнять",
+	"gen": "dat",
+	"formatter_man": "🤗| {first_user} обнял {second_user}",
+	"formatter_woman": "🤗| {first_user} обняла {second_user}",
+	"all_ending": "сразу всех"
+	 },
+	{
+	"name": "погладить",
+	"gen": "dat",
+	"formatter_man": "☺| {first_user} погладил {second_user}",
+	"formatter_woman": "☺| {first_user} погладила {second_user}",
+	"all_ending": "сразу всех"
+	 },
+	{
+	"name": "пнуть",
+	"gen": "dat",
+	"formatter_man": "😠| {first_user} пнул {second_user}",
+	"formatter_woman": "😠| {first_user} пнула {second_user}",
+	"all_ending": "сразу всех"
+	 },
+  {
+   "name": "ударить",
+   "gen": "dat",
+   "formatter_man": "{first_user} ударил {second user}",
+   "formatter_woman": "{first_user} ударила {second user}",
+   "all_ending": "сразу всех"
+   }
+  ],
+  "trusted": [
+    {
+      "user_id": 1
+    },
+    {
+      "user_id": 3
+    }
+  ],
+"repeater_word": "..",
+  "repeater_active": true,
+  "regex_deleter": []
+}
