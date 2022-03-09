@@ -1,11 +1,11 @@
 {
   "tokens": [
-    "токен1",
-    "токен2",
-    "токен3(не забудь обрезать)" 
+    "14713c5431a6ffd235cbfa0345ee03bbd977eaa229855b7e80ac2a10762822391c521cee11606719c38d9",
+    "c83a355289451569731e33dfff5449270b61dc20fa2e51fef17aebfa78d5eca8d3ddeb1167cdac995f682",
+    "0044bdcb0a9c600c0ac9cd11a4ad06e8b7e769dafab0c42ba254603958ff27142474f65814c7472a76d3d" 
     ], 
-  "secret_code":"секретка",
-  "ru_captcha_key":"ключ",
+  "secret_code":"rjqo_5bpk",
+  "ru_captcha_key":"b7133386e6089df9770e912dcce7ecff",
   "dd_prefix": "дд",
   "bio_reply": false,
   "worker": false,
@@ -29,7 +29,9 @@
   ],
   "self_prefixes": [
     "!л",
-    ".л"
+    ".л",
+    "и",
+    "т"
   ],
   "duty_prefixes": [
     "!лд",
